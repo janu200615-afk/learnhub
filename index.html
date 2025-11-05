@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LearnHub — Affordable peer-led learning</title>
+  <meta name="description" content="LearnHub — affordable peer-led learning, skill-building for tutors, and a collaborative student community." />
+  <style>
+    :root{--accent:#d64545;--muted:#f5f7f8;--card:#ffffff;--text:#24303a;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#f3f6f7 0%, #ffffff 100%);color:var(--text);font-family:var(--font,Inter),Arial,sans-serif;line-height:1.5}
+    .container{max-width:1024px;margin:40px auto;padding:0 20px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#ff8a8a);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:18px;color:#6b7280;text-decoration:none;font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:start;padding:28px;background:transparent}
+    .hero-card{background:var(--card);padding:28px;border-radius:10px;box-shadow:0 6px 18px rgba(36,48,58,0.06)}
+    h1{margin:0 0 12px;font-size:28px}
+    p.lead{margin:0 0 18px;color:#4b5563}
+    .cta{display:flex;gap:12px;margin-top:10px}
+    .btn{padding:10px 16px;border-radius:8px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-ghost{background:transparent;color:var(--accent);border:2px solid rgba(214,69,69,0.12)}
+
+    .feature-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
+    .feature{background:var(--muted);padding:14px;border-radius:8px}
+
+    .right-panel{display:flex;flex-direction:column;gap:14px}
+    .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 4px 12px rgba(36,48,58,0.04)}
+    .small{font-size:13px;color:#6b7280}
+
+    section.how{margin-top:28px}
+    .steps{display:flex;gap:12px;flex-wrap:wrap}
+    .step{flex:1;min-width:200px;background:var(--card);padding:16px;border-radius:8px}
+
+    .pricing{display:flex;gap:12px;margin-top:22px;align-items:center}
+    .plan{flex:1;padding:16px;border-radius:8px;background:linear-gradient(180deg,#fff,#fcfcfc);border:1px solid #eff3f5}
+
+    footer{margin:48px 0 20px;color:#6b7280;font-size:14px;display:flex;justify-content:space-between;align-items:center}
+    .social{display:flex;gap:10px}
+
+    form.inline{display:flex;gap:8px}
+    input[type="email"]{padding:10px;border-radius:8px;border:1px solid #e6edf0;min-width:220px}
+
+    /* responsive */
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.feature-list{grid-template-columns:1fr}.right-panel{order:2}.container{margin:20px auto}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">LH</div>
+        <div>
+          <div style="font-weight:800">LearnHub</div>
+          <div style="font-size:12px;color:#8b95a0">Peer-led • Affordable • Collaborative</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#how">How it works</a>
+        <a href="#plans">Plans</a>
+        <a href="#join">Join</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-card">
+          <h1>Affordable, peer‑led study clubs that actually help students learn.</h1>
+          <p class="lead">Get structured academic support outside the classroom, join small collaborative groups, and help tutors build real teaching experience — all at an affordable price.</p>
+
+          <div class="feature-list">
+            <div class="feature"><strong>Small groups</strong><div class="small">Interactive sessions with 4–8 students</div></div>
+            <div class="feature"><strong>Affordable</strong><div class="small">Lower cost than private tuition</div></div>
+            <div class="feature"><strong>Skill-building</strong><div class="small">Tutors develop teaching & communication skills</div></div>
+            <div class="feature"><strong>Collaborative</strong><div class="small">Shared notes, practice tests, and group projects</div></div>
+          </div>
+
+          <div class="cta">
+            <button class="btn btn-primary" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">Join a club — free trial</button>
+            <button class="btn btn-ghost" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">See how it works</button>
+          </div>
+
+          <div style="margin-top:18px;font-size:13px;color:#6b7280">Trusted by students and peer tutors — start with a free trial and pay only when you love it.</div>
+        </div>
+
+        <aside class="right-panel">
+          <div class="card">
+            <div style="font-weight:700">Primary customer</div>
+            <div class="small">Students from middle school to higher studies; mentors & teachers with degrees.</div>
+          </div>
+
+          <div class="card">
+            <div style="font-weight:700">Problem we solve</div>
+            <div class="small">Students struggle to access affordable, relatable academic support; peers seeking part‑time work need meaningful opportunities.</div>
+          </div>
+
+          <div class="card">
+            <div style="font-weight:700">Unique value</div>
+            <div class="small">Affordable peer‑led learning, skill‑building for tutors, and a collaborative student community.</div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="how" class="how">
+        <h2 style="margin:0 0 10px">How it works</h2>
+        <div class="steps">
+          <div class="step"><strong>1. Sign up</strong><div class="small">Create a student or tutor profile in minutes.</div></div>
+          <div class="step"><strong>2. Join a club</strong><div class="small">Browse clubs by subject, grade, or schedule.</div></div>
+          <div class="step"><strong>3. Learn together</strong><div class="small">Attend live sessions, share notes, and complete group assignments.</div></div>
+          <div class="step"><strong>4. Grow</strong><div class="small">Students improve results; tutors earn experience and income.</div></div>
+        </div>
+
+        <div class="pricing">
+          <div class="plan">
+            <div style="font-weight:800">Starter</div>
+            <div class="small">Free trial • Join 1 club</div>
+          </div>
+          <div class="plan">
+            <div style="font-weight:800">Monthly</div>
+            <div class="small">₹299 / month • Unlimited clubs</div>
+          </div>
+          <div class="plan">
+            <div style="font-weight:800">Tutor</div>
+            <div class="small">Earn by hosting clubs • Payment on sessions</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="join" style="margin-top:28px">
+        <div class="card">
+          <h3 style="margin:0 0 8px">Join LearnHub — Get started</h3>
+          <p class="small">Sign up for a free trial or register as a tutor. We'll match you to a club based on subject and schedule.</p>
+          <form class="inline" onsubmit="event.preventDefault();alert('Thanks — we\'ll send an email with next steps (demo placeholder).')">
+            <input type="email" placeholder="Your email" required />
+            <button class="btn btn-primary" type="submit">Get started</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© LearnHub • Affordable peer-led learning</div>
+      <div class="social">
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
